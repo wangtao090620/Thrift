@@ -9,6 +9,8 @@ android {
         targetSdkVersion 26
         versionCode 1
         versionName "1.0"
+        buildConfigField("String", "GIPHY_URL","\"http://api.giphy.com/v1/gifs/search\"")
+        buildConfigField("String", "GIPHY_KEY"," \"3o85xI99AHjMmiS27m\"")
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
@@ -26,7 +28,7 @@ android {
 
     sourceSets {
         main {
-            java.srcDirs = ['src','thrift']
+            java.srcDirs = ['src','gen-javame','thrift']
         }
     }
 }
