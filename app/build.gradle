@@ -11,6 +11,7 @@ android {
         versionName "1.0"
         buildConfigField("String", "GIPHY_URL","\"http://api.giphy.com/v1/gifs/search\"")
         buildConfigField("String", "GIPHY_KEY"," \"3o85xI99AHjMmiS27m\"")
+        buildConfigField("String", "GANK_URL"," \"http://gank.io/api/data/%E7%A6%8F%E5%88%A9/10/1\"")
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
@@ -38,4 +39,5 @@ dependencies {
     compile 'com.android.support:appcompat-v7:25.1.0'
     compile 'com.android.support:recyclerview-v7:25.1.0'
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile 'com.github.bumptech.glide:glide:3.6.1'
 }

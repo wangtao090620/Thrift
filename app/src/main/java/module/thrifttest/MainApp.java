@@ -6,6 +6,7 @@ import android.util.Log;
 import java.util.HashMap;
 
 import main.java.module.thrifttest.giphy.GiphyServiceApi;
+import main.java.module.thrifttest.proto.ImeServiceApi;
 import main.java.module.thrifttest.util.Initializable;
 import module.thrifttest.BuildConfig;
 
@@ -22,7 +23,8 @@ public class MainApp extends Application {
     public void onCreate() {
         super.onCreate();
         sShared = this;
-
+        ImeServiceApi imeServiceApi = ImeServiceApi.shared();
+        imeServiceApi.setUrl(BuildConfig.GANK_URL);
         GiphyServiceApi.shared().setUrl(BuildConfig.GIPHY_URL);
     }
 

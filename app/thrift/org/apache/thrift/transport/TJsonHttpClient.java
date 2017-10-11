@@ -92,7 +92,6 @@ public class TJsonHttpClient extends THttpClient {
             }
             String urlWithParams = sb.toString();
             log.debug("request config url :"+urlWithParams);
-            // Create connection object
             final URL url = new URL(urlWithParams);
             final HttpURLConnection connection = (HttpURLConnection) url.openConnection();
             // Timeouts, only if explicitly set
